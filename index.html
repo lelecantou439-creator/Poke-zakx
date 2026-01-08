@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset='UTF-8'>
-<title>Pokezakx</title>
-<link rel='stylesheet' href='style.css'>
+<meta charset="UTF-8">
+<title>Pokezakx Web</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="app">
+<h1 class="title">Pokezakx</h1>
 <div id="menu">
-  <h1>Pokezakx</h1>
-  <button onclick="startGame()">Jogar</button>
+<button onclick="startBattle()">🔎 Procurar Batalha</button>
+<button onclick="showTeam()">👾 Ver Criaturas</button>
+<button onclick="showAbout()">ℹ Sobre</button>
 </div>
-
-<div id="battle" style="display:none;">
-  <h2>Batalha!</h2>
-  <div id="status"></div>
-  <div id="moves"></div>
-  <button onclick="goMenu()">Voltar ao Menu</button>
+<div id="battle" class="hidden">
+<h2>Batalha</h2>
+<div id="player"><h3>Você</h3><p id="playerName"></p><p id="playerHP"></p></div>
+<div id="enemy"><h3>Inimigo</h3><p id="enemyName"></p><p id="enemyHP"></p></div>
+<div id="attacks"></div>
+<button onclick="backToMenu()">⬅ Voltar ao Menu</button>
 </div>
-
+<div id="team" class="hidden"></div>
+<div id="about" class="hidden">
+<h2>Sobre o Jogo</h2>
+<p>Versão Web do Pokezakx.</p>
+<button onclick="backToMenu()">⬅ Voltar</button>
+</div>
+</div>
 <script src="game.js"></script>
 </body>
 </html>
